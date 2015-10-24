@@ -1,0 +1,103 @@
+[b]CHANGELOG version 2.0[/b] [i]"LE VENT DU CHANGEMENT"[/i]
+[hide]
+[u][b]Build Date[/b] : 05/08/2015[/u]
+
+NOUVEAU :
+[list]
+[*]Du code de debug a été ajouté, mais n'est pas activé par défaut.
+[/list]
+
+MODIFIÉ :
+[list]
+[*]Réécriture du moteur interne, le code est plus simple (en vrai non, mais ça fait genre de dire ça :D)
+[*]Ajout de deux instructions oubliées :P
+[*]Réorganisation d'une partie des instructions.
+[*]Le déroulement de la table d'items (qui n'existe pas sur téléphone) a été accéléré.
+[/list]
+
+BUGFIX :
+[list]
+[*]Un bug graphique lié au spam du bouton "Cacher/Afficher la HEX liste" a été patché. (#005)
+[*]Un bug lié au déclenchement intempestif de l'avertissement "Items présent plusieurs fois" a été patché. (#007)
+[*]Un bug faisait que l'avertissement "Utilisation d'items sans quantité..." se déclenchait même s'il était désactivé. (#006)
+[*]Tenter d'ajouter certaines instructions ne fonctionnait pas et faisait planter le compilateur. (#003 et #004)
+[/list]
+[/hide]
+
+[b]CHANGELOG version 2.1[/b] [i]"Un Coup de Balai"[/i]
+[hide]
+[u][b]Build date[/b] : 19/08/2015[/u]
+
+NOUVEAU :
+[list]
+[*]Ajout de l'instruction jp (hl), oubliée mais enfin la liste est complète ! (Enfin j'espère)
+[*]Ajout d'une image donnant sur mon compte Twitter pour se tenir à jour des updates.
+[*]Ajout de beaucoup d'aides au debug.
+[*]Le code a été compressé, il pèse 25 Ko de moins.
+[*]Ajout d'un indicateur de la version du compilateur
+[*]Un lien vers mon fil Twitter a été ajouté, si vous voulez vous tenir à jour des updates
+[/list]
+
+MODIFIÉ :
+[list]
+[*]Certaines instructions (exemple : ret m) sont exclusives au z80 original, je les avais mises par réflexe. My bad, je les ai enlevées.
+[*]Le code a été réorganisé, commenté et clarifié. En outre, certaines fonctions redondantes ou inutilisées ont été enlevées.
+[*]Les cases à cocher sont devenues des boutons-poussoirs. Je trouve ça plus joli, et ça me simplifie un peu la vie (rapport à [url=https://bugzilla.mozilla.org/show_bug.cgi?id=654072]un bug de Firefox[/url]...)
+[*]Enlevé le "(P) " en face des instructions nécessitant un octet $CB en préfixe.
+[*][imm8], [imm16] et [mem16] sont maintenant remplacés par l'argument dans la liste.
+[*]L'organisation de la page a été légèrement modifiée.
+[/list]
+
+BUGFIX :
+[list]
+[*]Ajout de jp (hl). (#001)
+[*]Fixé un bug empêchant la compilation dans certains cas. (#008)
+[*]Retiré des instructions exclusives au z80 original que j'avais mises dans le compilateur par réflexe. (#002)
+[*]Le bouton "Tout supprimer" ne fonctionne pas. (#009)
+[*]Les instructions préfixées ne fonctionnaient pas correctement. (#010)
+[*]La commande "neg", qui n'existait que sur la version originale du z80, a été retirée. (#011)
+[/list]
+[/hide]
+
+[b]CHANGELOG version 2.2[/b] [i]"Slid3rne5s Re0rG"[/i]
+[hide]
+[u][b]Build date[/b] : 20/08/2015[/u]
+
+NOUVEAU :
+[list]
+[*]Une meilleure animation a été mise en place pour la sidebar. (En prime elle fixe le bug #012)
+[/list]
+
+MODIFIÉ :
+[list]
+[*]Les boutons d'activation des avertissements sont maintenant un par ligne (et plus larges).
+[*]Grâce au patch du bug #012, la compatibilité pour Internet Explorer 9 est rétablie. Néanmoins, IE8 et inférieurs ne sont toujours pas supportés.
+[*]Les variables et utilitaires globaux ont été regroupés dans le code. C'est plus clair, en fait.
+[/list]
+
+BUGFIX :
+[list]
+[*]L'animation de la sidebar plantait sous Internet Explorer 9. (#012)
+[*]Compiler plusieurs fois sans recharger la page compilait plusieurs fois simultanément (#013)
+[/list]
+[/hide]
+
+[b]CHANGELOG version A.B[/b] [i]"NOM DE LA RELEASE"[/i]
+[hide]
+[u][b]Build date[/b] : ??/??/20??[/u]
+
+NOUVEAU :
+[list]
+[*]Rien pour cette version ! Revenez plus tard !
+[/list]
+
+MODIFIÉ :
+[list]
+[*]Rien pour cette version ! Revenez plus tard !
+[/list]
+
+BUGFIX :
+[list]
+[*]Rien à fixer. Donc c'est bien :)
+[/list]
+[/hide]

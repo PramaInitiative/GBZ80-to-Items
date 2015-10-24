@@ -5,7 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-        <title>GBZ80 to items</title>
+        <title>ASM to items</title>
 
         <!-- Latest compiled and minified CSS -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
@@ -14,7 +14,7 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
         
         <!-- Style pour cette page uniquement -->
-        <link rel="stylesheet" href="style.min.css">
+        <link rel="stylesheet" href="css/style.css">
 
         <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -28,7 +28,7 @@
         <div class="modal fade" id="ajouter" tabindex="-1" role="dialog" data-backdrop="static" data-keyboard="false">
             <div class="modal-dialog modal-lg" role="document">
                 <div class="modal-content">
-                    <div class="modal-mapCo bg-primary">
+                    <div class="modal-header bg-primary">
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                         <h4 class="modal-title">Ajouter une instruction</h4>
                     </div>
@@ -155,14 +155,14 @@
                                             </button>
                                             <ul class="dropdown-menu">
                                                 <li><a href="#" data-toolbar="prefixLessRot">Sans pr&eacute;fixe</a></li>
-                                                <li><a href="#" data-toolbar="rlc">rlc reg8</a></li>
-                                                <li><a href="#" data-toolbar="rrc">rrc reg8</a></li>
-                                                <li><a href="#" data-toolbar="rl">rl reg8</a></li>
-                                                <li><a href="#" data-toolbar="rr">rr reg8</a></li>
-                                                <li><a href="#" data-toolbar="sla">sla reg8</a></li>
-                                                <li><a href="#" data-toolbar="sra">sra reg8</a></li>
-                                                <li><a href="#" data-toolbar="swap">swap reg8</a></li>
-                                                <li><a href="#" data-toolbar="srl">srl reg8</a></li>
+                                                <li><a href="#" data-toolbar="rlc">(P) rlc reg8</a></li>
+                                                <li><a href="#" data-toolbar="rrc">(P) rrc reg8</a></li>
+                                                <li><a href="#" data-toolbar="rl">(P) rl reg8</a></li>
+                                                <li><a href="#" data-toolbar="rr">(P) rr reg8</a></li>
+                                                <li><a href="#" data-toolbar="sla">(P) sla reg8</a></li>
+                                                <li><a href="#" data-toolbar="sra">(P) sra reg8</a></li>
+                                                <li><a href="#" data-toolbar="swap">(P) swap reg8</a></li>
+                                                <li><a href="#" data-toolbar="srl">(P) srl reg8</a></li>
                                             </ul>
                                         </div>
                                         <div class="btn-group" role="group">
@@ -171,30 +171,30 @@
                                                 <span class="caret"></span>
                                             </button>
                                             <ul class="dropdown-menu">
-                                                <li><a href="#" data-toolbar="bit0">bit 0, reg8</a></li>
-                                                <li><a href="#" data-toolbar="bit1">bit 1, reg8</a></li>
-                                                <li><a href="#" data-toolbar="bit2">bit 2, reg8</a></li>
-                                                <li><a href="#" data-toolbar="bit3">bit 3, reg8</a></li>
-                                                <li><a href="#" data-toolbar="bit4">bit 4, reg8</a></li>
-                                                <li><a href="#" data-toolbar="bit5">bit 5, reg8</a></li>
-                                                <li><a href="#" data-toolbar="bit6">bit 6, reg8</a></li>
-                                                <li><a href="#" data-toolbar="bit7">bit 7, reg8</a></li>
-                                                <li><a href="#" data-toolbar="res0">res 0, reg8</a></li>
-                                                <li><a href="#" data-toolbar="res1">res 1, reg8</a></li>
-                                                <li><a href="#" data-toolbar="res2">res 2, reg8</a></li>
-                                                <li><a href="#" data-toolbar="res3">res 3, reg8</a></li>
-                                                <li><a href="#" data-toolbar="res4">res 4, reg8</a></li>
-                                                <li><a href="#" data-toolbar="res5">res 5, reg8</a></li>
-                                                <li><a href="#" data-toolbar="res6">res 6, reg8</a></li>
-                                                <li><a href="#" data-toolbar="res7">res 7, reg8</a></li>
-                                                <li><a href="#" data-toolbar="set0">set 0, reg8</a></li>
-                                                <li><a href="#" data-toolbar="set1">set 1, reg8</a></li>
-                                                <li><a href="#" data-toolbar="set2">set 2, reg8</a></li>
-                                                <li><a href="#" data-toolbar="set3">set 3, reg8</a></li>
-                                                <li><a href="#" data-toolbar="set4">set 4, reg8</a></li>
-                                                <li><a href="#" data-toolbar="set5">set 5, reg8</a></li>
-                                                <li><a href="#" data-toolbar="set6">set 6, reg8</a></li>
-                                                <li><a href="#" data-toolbar="set7">set 7, reg8</a></li>
+                                                <li><a href="#" data-toolbar="bit0">(P) bit 0, reg8</a></li>
+                                                <li><a href="#" data-toolbar="bit1">(P) bit 1, reg8</a></li>
+                                                <li><a href="#" data-toolbar="bit2">(P) bit 2, reg8</a></li>
+                                                <li><a href="#" data-toolbar="bit3">(P) bit 3, reg8</a></li>
+                                                <li><a href="#" data-toolbar="bit4">(P) bit 4, reg8</a></li>
+                                                <li><a href="#" data-toolbar="bit5">(P) bit 5, reg8</a></li>
+                                                <li><a href="#" data-toolbar="bit6">(P) bit 6, reg8</a></li>
+                                                <li><a href="#" data-toolbar="bit7">(P) bit 7, reg8</a></li>
+                                                <li><a href="#" data-toolbar="res0">(P) res 0, reg8</a></li>
+                                                <li><a href="#" data-toolbar="res1">(P) res 1, reg8</a></li>
+                                                <li><a href="#" data-toolbar="res2">(P) res 2, reg8</a></li>
+                                                <li><a href="#" data-toolbar="res3">(P) res 3, reg8</a></li>
+                                                <li><a href="#" data-toolbar="res4">(P) res 4, reg8</a></li>
+                                                <li><a href="#" data-toolbar="res5">(P) res 5, reg8</a></li>
+                                                <li><a href="#" data-toolbar="res6">(P) res 6, reg8</a></li>
+                                                <li><a href="#" data-toolbar="res7">(P) res 7, reg8</a></li>
+                                                <li><a href="#" data-toolbar="set0">(P) set 0, reg8</a></li>
+                                                <li><a href="#" data-toolbar="set1">(P) set 1, reg8</a></li>
+                                                <li><a href="#" data-toolbar="set2">(P) set 2, reg8</a></li>
+                                                <li><a href="#" data-toolbar="set3">(P) set 3, reg8</a></li>
+                                                <li><a href="#" data-toolbar="set4">(P) set 4, reg8</a></li>
+                                                <li><a href="#" data-toolbar="set5">(P) set 5, reg8</a></li>
+                                                <li><a href="#" data-toolbar="set6">(P) set 6, reg8</a></li>
+                                                <li><a href="#" data-toolbar="set7">(P) set 7, reg8</a></li>
                                                 <li><a href="#" data-toolbar="miscBitLevel">autres (sans pr&eacute;fixe)</a></li>
                                             </ul>
                                         </div>
@@ -264,7 +264,7 @@
                             </div>
                         </div>
                         <div id="buttonBars">
-                            <div id="a8bitLoads" class="btn-group btn-group-justified" role="group" aria-label="ld a, op8">
+                            <div id="a8bitLoads" class="btn-group btn-group-justified hidden" role="group" aria-label="ld a, op8">
                                 <div class="btn-group" role="group"><button type="button" class="btn btn-default">ld a, a</button></div>
                                 <div class="btn-group" role="group"><button type="button" class="btn btn-default">ld a, b</button></div>
                                 <div class="btn-group" role="group"><button type="button" class="btn btn-default">ld a, c</button></div>
@@ -275,7 +275,7 @@
                                 <div class="btn-group" role="group"><button type="button" class="btn btn-default">ld a, (hl)</button></div>
                                 <div class="btn-group" role="group"><button type="button" class="btn btn-default">ld a, [imm<sub>8</sub>]</button></div>
                             </div>
-                            <div id="b8bitLoads" class="btn-group btn-group-justified" role="group" aria-label="ld b, op8">
+                            <div id="b8bitLoads" class="btn-group btn-group-justified hidden" role="group" aria-label="ld b, op8">
                                 <div class="btn-group" role="group"><button type="button" class="btn btn-default">ld b, a</button></div>
                                 <div class="btn-group" role="group"><button type="button" class="btn btn-default">ld b, b</button></div>
                                 <div class="btn-group" role="group"><button type="button" class="btn btn-default">ld b, c</button></div>
@@ -286,7 +286,7 @@
                                 <div class="btn-group" role="group"><button type="button" class="btn btn-default">ld b, (hl)</button></div>
                                 <div class="btn-group" role="group"><button type="button" class="btn btn-default">ld b, [imm<sub>8</sub>]</button></div>
                             </div>
-                            <div id="c8bitLoads" class="btn-group btn-group-justified" role="group" aria-label="ld c, op8">
+                            <div id="c8bitLoads" class="btn-group btn-group-justified hidden" role="group" aria-label="ld c, op8">
                                 <div class="btn-group" role="group"><button type="button" class="btn btn-default">ld c, a</button></div>
                                 <div class="btn-group" role="group"><button type="button" class="btn btn-default">ld c, b</button></div>
                                 <div class="btn-group" role="group"><button type="button" class="btn btn-default">ld c, c</button></div>
@@ -297,7 +297,7 @@
                                 <div class="btn-group" role="group"><button type="button" class="btn btn-default">ld c, (hl)</button></div>
                                 <div class="btn-group" role="group"><button type="button" class="btn btn-default">ld c, [imm<sub>8</sub>]</button></div>
                             </div>
-                            <div id="d8bitLoads" class="btn-group btn-group-justified" role="group" aria-label="ld d, op8">
+                            <div id="d8bitLoads" class="btn-group btn-group-justified hidden" role="group" aria-label="ld d, op8">
                                 <div class="btn-group" role="group"><button type="button" class="btn btn-default">ld d, a</button></div>
                                 <div class="btn-group" role="group"><button type="button" class="btn btn-default">ld d, b</button></div>
                                 <div class="btn-group" role="group"><button type="button" class="btn btn-default">ld d, c</button></div>
@@ -308,7 +308,7 @@
                                 <div class="btn-group" role="group"><button type="button" class="btn btn-default">ld d, (hl)</button></div>
                                 <div class="btn-group" role="group"><button type="button" class="btn btn-default">ld d, [imm<sub>8</sub>]</button></div>
                             </div>
-                            <div id="e8bitLoads" class="btn-group btn-group-justified" role="group" aria-label="ld e, op8">
+                            <div id="e8bitLoads" class="btn-group btn-group-justified hidden" role="group" aria-label="ld e, op8">
                                 <div class="btn-group" role="group"><button type="button" class="btn btn-default">ld e, a</button></div>
                                 <div class="btn-group" role="group"><button type="button" class="btn btn-default">ld e, b</button></div>
                                 <div class="btn-group" role="group"><button type="button" class="btn btn-default">ld e, c</button></div>
@@ -319,7 +319,7 @@
                                 <div class="btn-group" role="group"><button type="button" class="btn btn-default">ld e, (hl)</button></div>
                                 <div class="btn-group" role="group"><button type="button" class="btn btn-default">ld e, [imm<sub>8</sub>]</button></div>
                             </div>
-                            <div id="h8bitLoads" class="btn-group btn-group-justified" role="group" aria-label="ld h, op8">
+                            <div id="h8bitLoads" class="btn-group btn-group-justified hidden" role="group" aria-label="ld h, op8">
                                 <div class="btn-group" role="group"><button type="button" class="btn btn-default">ld h, a</button></div>
                                 <div class="btn-group" role="group"><button type="button" class="btn btn-default">ld h, b</button></div>
                                 <div class="btn-group" role="group"><button type="button" class="btn btn-default">ld h, c</button></div>
@@ -330,7 +330,7 @@
                                 <div class="btn-group" role="group"><button type="button" class="btn btn-default">ld h, (hl)</button></div>
                                 <div class="btn-group" role="group"><button type="button" class="btn btn-default">ld h, [imm<sub>8</sub>]</button></div>
                             </div>
-                            <div id="l8bitLoads" class="btn-group btn-group-justified" role="group" aria-label="ld l, op8">
+                            <div id="l8bitLoads" class="btn-group btn-group-justified hidden" role="group" aria-label="ld l, op8">
                                 <div class="btn-group" role="group"><button type="button" class="btn btn-default">ld l, a</button></div>
                                 <div class="btn-group" role="group"><button type="button" class="btn btn-default">ld l, b</button></div>
                                 <div class="btn-group" role="group"><button type="button" class="btn btn-default">ld l, c</button></div>
@@ -341,7 +341,7 @@
                                 <div class="btn-group" role="group"><button type="button" class="btn btn-default">ld l, (hl)</button></div>
                                 <div class="btn-group" role="group"><button type="button" class="btn btn-default">ld l, [imm<sub>8</sub>]</button></div>
                             </div>
-                            <div id="hl8bitLoads" class="btn-group btn-group-justified" role="group" aria-label="ld (hl), op8">
+                            <div id="hl8bitLoads" class="btn-group btn-group-justified hidden" role="group" aria-label="ld (hl), op8">
                                 <div class="btn-group" role="group"><button type="button" class="btn btn-default">ld (hl), a</button></div>
                                 <div class="btn-group" role="group"><button type="button" class="btn btn-default">ld (hl), b</button></div>
                                 <div class="btn-group" role="group"><button type="button" class="btn btn-default">ld (hl), c</button></div>
@@ -351,7 +351,7 @@
                                 <div class="btn-group" role="group"><button type="button" class="btn btn-default">ld (hl), l</button></div>
                                 <div class="btn-group" role="group"><button type="button" class="btn btn-default">ld (hl), [imm<sub>8</sub>]</button></div>
                             </div>
-                            <div id="memory8bitLoads" class="btn-group btn-group-justified" role="group" aria-label="ld a, op8">
+                            <div id="memory8bitLoads" class="btn-group btn-group-justified hidden" role="group" aria-label="ld a, op8">
                                 <div class="btn-group" role="group"><button type="button" class="btn btn-default">ldi a, (hl)</button></div>
                                 <div class="btn-group" role="group"><button type="button" class="btn btn-default">ldd a, (hl)</button></div>
                                 <div class="btn-group" role="group"><button type="button" class="btn btn-default">ldi (hl), a</button></div>
@@ -362,28 +362,28 @@
                                 <div class="btn-group" role="group"><button type="button" class="btn btn-default">ld a, (mem<sub>16</sub>)</button></div>
                                 <div class="btn-group" role="group"><button type="button" class="btn btn-default">ld (mem<sub>16</sub>), a</button></div>
                             </div>
-                            <div id="immediate16bitLoads" class="btn-group btn-group-justified" role="group" aria-label="ld reg16, [imm<sub>16</sub>]">
+                            <div id="immediate16bitLoads" class="btn-group btn-group-justified hidden" role="group" aria-label="ld reg16, [imm<sub>16</sub>]">
                                 <div class="btn-group" role="group"><button type="button" class="btn btn-default">ld bc, [imm<sub>16</sub>]</button></div>
                                 <div class="btn-group" role="group"><button type="button" class="btn btn-default">ld de, [imm<sub>16</sub>]</button></div>
                                 <div class="btn-group" role="group"><button type="button" class="btn btn-default">ld hl, [imm<sub>16</sub>]</button></div>
                             </div>
-                            <div id="sp16bitLoads" class="btn-group btn-group-justified" role="group" aria-label="misc sp">
+                            <div id="sp16bitLoads" class="btn-group btn-group-justified hidden" role="group" aria-label="misc sp">
                                 <div class="btn-group" role="group"><button type="button" class="btn btn-default">ld sp, hl</button></div>
                                 <div class="btn-group" role="group"><button type="button" class="btn btn-default">ld hl, add sp, [imm<sub>8</sub>]</button></div>
                             </div>
-                            <div id="push" class="btn-group btn-group-justified" role="group" aria-label="push op16">
+                            <div id="push" class="btn-group btn-group-justified hidden" role="group" aria-label="push op16">
                                 <div class="btn-group" role="group"><button type="button" class="btn btn-default">push af</button></div>
                                 <div class="btn-group" role="group"><button type="button" class="btn btn-default">push bc</button></div>
                                 <div class="btn-group" role="group"><button type="button" class="btn btn-default">push de</button></div>
                                 <div class="btn-group" role="group"><button type="button" class="btn btn-default">push hl</button></div>
                             </div>
-                            <div id="pop" class="btn-group btn-group-justified" role="group" aria-label="pop op16">
+                            <div id="pop" class="btn-group btn-group-justified hidden" role="group" aria-label="pop op16">
                                 <div class="btn-group" role="group"><button type="button" class="btn btn-default">pop af</button></div>
                                 <div class="btn-group" role="group"><button type="button" class="btn btn-default">pop bc</button></div>
                                 <div class="btn-group" role="group"><button type="button" class="btn btn-default">pop de</button></div>
                                 <div class="btn-group" role="group"><button type="button" class="btn btn-default">pop hl</button></div>
                             </div>
-                            <div id="add8" class="btn-group btn-group-justified" role="group" aria-label="add a, op8">
+                            <div id="add8" class="btn-group btn-group-justified hidden" role="group" aria-label="add a, op8">
                                 <div class="btn-group" role="group"><button type="button" class="btn btn-default">add a, a</button></div>
                                 <div class="btn-group" role="group"><button type="button" class="btn btn-default">add a, b</button></div>
                                 <div class="btn-group" role="group"><button type="button" class="btn btn-default">add a, c</button></div>
@@ -394,13 +394,13 @@
                                 <div class="btn-group" role="group"><button type="button" class="btn btn-default">add a, (hl)</button></div>
                                 <div class="btn-group" role="group"><button type="button" class="btn btn-default">add a, [imm<sub>8</sub>]</button></div>
                             </div>
-                            <div id="add16" class="btn-group btn-group-justified" role="group" aria-label="add hl, reg16">
+                            <div id="add16" class="btn-group btn-group-justified hidden" role="group" aria-label="add hl, reg16">
                                 <div class="btn-group" role="group"><button type="button" class="btn btn-default">add hl, bc</button></div>
                                 <div class="btn-group" role="group"><button type="button" class="btn btn-default">add hl, de</button></div>
                                 <div class="btn-group" role="group"><button type="button" class="btn btn-default">add hl, hl</button></div>
                                 <div class="btn-group" role="group"><button type="button" class="btn btn-default">add hl, sp</button></div>
                             </div>
-                            <div id="adc8" class="btn-group btn-group-justified" role="group" aria-label="adc a, op8">
+                            <div id="adc8" class="btn-group btn-group-justified hidden" role="group" aria-label="adc a, op8">
                                 <div class="btn-group" role="group"><button type="button" class="btn btn-default">adc a, a</button></div>
                                 <div class="btn-group" role="group"><button type="button" class="btn btn-default">adc a, b</button></div>
                                 <div class="btn-group" role="group"><button type="button" class="btn btn-default">adc a, c</button></div>
@@ -411,13 +411,13 @@
                                 <div class="btn-group" role="group"><button type="button" class="btn btn-default">adc a, (hl)</button></div>
                                 <div class="btn-group" role="group"><button type="button" class="btn btn-default">adc a, [imm<sub>8</sub>]</button></div>
                             </div>
-                            <div id="adc16" class="btn-group btn-group-justified" role="group" aria-label="adc hl, reg16">
+                            <div id="adc16" class="btn-group btn-group-justified hidden" role="group" aria-label="adc hl, reg16">
                                 <div class="btn-group" role="group"><button type="button" class="btn btn-default">adc hl, bc</button></div>
                                 <div class="btn-group" role="group"><button type="button" class="btn btn-default">adc hl, de</button></div>
                                 <div class="btn-group" role="group"><button type="button" class="btn btn-default">adc hl, hl</button></div>
                                 <div class="btn-group" role="group"><button type="button" class="btn btn-default">adc hl, sp</button></div>
                             </div>
-                            <div id="sub8" class="btn-group btn-group-justified" role="group" aria-label="sub a, op8">
+                            <div id="sub8" class="btn-group btn-group-justified hidden" role="group" aria-label="sub a, op8">
                                 <div class="btn-group" role="group"><button type="button" class="btn btn-default">sub a, a</button></div>
                                 <div class="btn-group" role="group"><button type="button" class="btn btn-default">sub a, b</button></div>
                                 <div class="btn-group" role="group"><button type="button" class="btn btn-default">sub a, c</button></div>
@@ -428,7 +428,7 @@
                                 <div class="btn-group" role="group"><button type="button" class="btn btn-default">sub a, (hl)</button></div>
                                 <div class="btn-group" role="group"><button type="button" class="btn btn-default">sub a, [imm<sub>8</sub>]</button></div>
                             </div>
-                            <div id="sbc8" class="btn-group btn-group-justified" role="group" aria-label="sbc a, op8">
+                            <div id="sbc8" class="btn-group btn-group-justified hidden" role="group" aria-label="sbc a, op8">
                                 <div class="btn-group" role="group"><button type="button" class="btn btn-default">sbc a, a</button></div>
                                 <div class="btn-group" role="group"><button type="button" class="btn btn-default">sbc a, b</button></div>
                                 <div class="btn-group" role="group"><button type="button" class="btn btn-default">sbc a, c</button></div>
@@ -439,13 +439,13 @@
                                 <div class="btn-group" role="group"><button type="button" class="btn btn-default">sbc a, (hl)</button></div>
                                 <div class="btn-group" role="group"><button type="button" class="btn btn-default">sbc a, [imm<sub>8</sub>]</button></div>
                             </div>
-                            <div id="sbc16" class="btn-group btn-group-justified" role="group" aria-label="sbc hl, reg16">
+                            <div id="sbc16" class="btn-group btn-group-justified hidden" role="group" aria-label="sbc hl, reg16">
                                 <div class="btn-group" role="group"><button type="button" class="btn btn-default">sbc hl, bc</button></div>
                                 <div class="btn-group" role="group"><button type="button" class="btn btn-default">sbc hl, de</button></div>
                                 <div class="btn-group" role="group"><button type="button" class="btn btn-default">sbc hl, hl</button></div>
                                 <div class="btn-group" role="group"><button type="button" class="btn btn-default">sbc hl, sp</button></div>
                             </div>
-                            <div id="cp" class="btn-group btn-group-justified" role="group" aria-label="cp op8">
+                            <div id="cp" class="btn-group btn-group-justified hidden" role="group" aria-label="cp op8">
                                 <div class="btn-group" role="group"><button type="button" class="btn btn-default">cp a</button></div>
                                 <div class="btn-group" role="group"><button type="button" class="btn btn-default">cp b</button></div>
                                 <div class="btn-group" role="group"><button type="button" class="btn btn-default">cp c</button></div>
@@ -456,7 +456,7 @@
                                 <div class="btn-group" role="group"><button type="button" class="btn btn-default">cp (hl)</button></div>
                                 <div class="btn-group" role="group"><button type="button" class="btn btn-default">cp [imm<sub>8</sub>]</button></div>
                             </div>
-                            <div id="inc8" class="btn-group btn-group-justified" role="group" aria-label="inc op8">
+                            <div id="inc8" class="btn-group btn-group-justified hidden" role="group" aria-label="inc op8">
                                 <div class="btn-group" role="group"><button type="button" class="btn btn-default">inc a</button></div>
                                 <div class="btn-group" role="group"><button type="button" class="btn btn-default">inc b</button></div>
                                 <div class="btn-group" role="group"><button type="button" class="btn btn-default">inc c</button></div>
@@ -466,13 +466,13 @@
                                 <div class="btn-group" role="group"><button type="button" class="btn btn-default">inc l</button></div>
                                 <div class="btn-group" role="group"><button type="button" class="btn btn-default">inc (hl)</button></div>
                             </div>
-                            <div id="inc16" class="btn-group btn-group-justified" role="group" aria-label="inc reg16">
+                            <div id="inc16" class="btn-group btn-group-justified hidden" role="group" aria-label="inc reg16">
                                 <div class="btn-group" role="group"><button type="button" class="btn btn-default">inc bc</button></div>
                                 <div class="btn-group" role="group"><button type="button" class="btn btn-default">inc de</button></div>
                                 <div class="btn-group" role="group"><button type="button" class="btn btn-default">inc hl</button></div>
                                 <div class="btn-group" role="group"><button type="button" class="btn btn-default">inc sp</button></div>
                             </div>
-                            <div id="dec8" class="btn-group btn-group-justified" role="group" aria-label="dec op8">
+                            <div id="dec8" class="btn-group btn-group-justified hidden" role="group" aria-label="dec op8">
                                 <div class="btn-group" role="group"><button type="button" class="btn btn-default">dec a</button></div>
                                 <div class="btn-group" role="group"><button type="button" class="btn btn-default">dec b</button></div>
                                 <div class="btn-group" role="group"><button type="button" class="btn btn-default">dec c</button></div>
@@ -482,17 +482,18 @@
                                 <div class="btn-group" role="group"><button type="button" class="btn btn-default">dec l</button></div>
                                 <div class="btn-group" role="group"><button type="button" class="btn btn-default">dec (hl)</button></div>
                             </div>
-                            <div id="dec16" class="btn-group btn-group-justified" role="group" aria-label="dec reg16">
+                            <div id="dec16" class="btn-group btn-group-justified hidden" role="group" aria-label="dec reg16">
                                 <div class="btn-group" role="group"><button type="button" class="btn btn-default">dec bc</button></div>
                                 <div class="btn-group" role="group"><button type="button" class="btn btn-default">dec de</button></div>
                                 <div class="btn-group" role="group"><button type="button" class="btn btn-default">dec hl</button></div>
                                 <div class="btn-group" role="group"><button type="button" class="btn btn-default">dec sp</button></div>
                             </div>
-                            <div id="miscArithm" class="btn-group btn-group-justified" role="group" aria-label="misc">
+                            <div id="miscArithm" class="btn-group btn-group-justified hidden" role="group" aria-label="misc">
+                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">neg</button></div>
                                 <div class="btn-group" role="group"><button type="button" class="btn btn-default">cpl</button></div>
                                 <div class="btn-group" role="group"><button type="button" class="btn btn-default">daa</button></div>
                             </div>
-                            <div id="and" class="btn-group btn-group-justified" role="group" aria-label="and op8">
+                            <div id="and" class="btn-group btn-group-justified hidden" role="group" aria-label="and op8">
                                 <div class="btn-group" role="group"><button type="button" class="btn btn-default">and a</button></div>
                                 <div class="btn-group" role="group"><button type="button" class="btn btn-default">and b</button></div>
                                 <div class="btn-group" role="group"><button type="button" class="btn btn-default">and c</button></div>
@@ -503,7 +504,7 @@
                                 <div class="btn-group" role="group"><button type="button" class="btn btn-default">and (hl)</button></div>
                                 <div class="btn-group" role="group"><button type="button" class="btn btn-default">and [imm<sub>8</sub>]</button></div>
                             </div>
-                            <div id="or" class="btn-group btn-group-justified" role="group" aria-label="or op8">
+                            <div id="or" class="btn-group btn-group-justified hidden" role="group" aria-label="or op8">
                                 <div class="btn-group" role="group"><button type="button" class="btn btn-default">or a</button></div>
                                 <div class="btn-group" role="group"><button type="button" class="btn btn-default">or b</button></div>
                                 <div class="btn-group" role="group"><button type="button" class="btn btn-default">or c</button></div>
@@ -514,7 +515,7 @@
                                 <div class="btn-group" role="group"><button type="button" class="btn btn-default">or (hl)</button></div>
                                 <div class="btn-group" role="group"><button type="button" class="btn btn-default">or [imm<sub>8</sub>]</button></div>
                             </div>
-                            <div id="xor" class="btn-group btn-group-justified" role="group" aria-label="xor op8">
+                            <div id="xor" class="btn-group btn-group-justified hidden" role="group" aria-label="xor op8">
                                 <div class="btn-group" role="group"><button type="button" class="btn btn-default">xor a</button></div>
                                 <div class="btn-group" role="group"><button type="button" class="btn btn-default">xor b</button></div>
                                 <div class="btn-group" role="group"><button type="button" class="btn btn-default">xor c</button></div>
@@ -525,17 +526,17 @@
                                 <div class="btn-group" role="group"><button type="button" class="btn btn-default">xor (hl)</button></div>
                                 <div class="btn-group" role="group"><button type="button" class="btn btn-default">xor [imm<sub>8</sub>]</button></div>
                             </div>
-                            <div id="rlc" class="btn-group btn-group-justified" role="group" aria-label="rlc op8">
-                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">rlc a</button></div>
-                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">rlc b</button></div>
-                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">rlc c</button></div>
-                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">rlc d</button></div>
-                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">rlc e</button></div>
-                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">rlc h</button></div>
-                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">rlc l</button></div>
-                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">rlc (hl)</button></div>
+                            <div id="rlc" class="btn-group btn-group-justified hidden" role="group" aria-label="rlc op8">
+                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">(P) rlc a</button></div>
+                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">(P) rlc b</button></div>
+                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">(P) rlc c</button></div>
+                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">(P) rlc d</button></div>
+                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">(P) rlc e</button></div>
+                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">(P) rlc h</button></div>
+                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">(P) rlc l</button></div>
+                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">(P) rlc (hl)</button></div>
                             </div>
-                            <div id="rrc" class="btn-group btn-group-justified" role="group" aria-label="rrc op8">
+                            <div id="rrc" class="btn-group btn-group-justified hidden" role="group" aria-label="rrc op8">
                                 <div class="btn-group" role="group"><button type="button" class="btn btn-default">rrc a</button></div>
                                 <div class="btn-group" role="group"><button type="button" class="btn btn-default">rrc b</button></div>
                                 <div class="btn-group" role="group"><button type="button" class="btn btn-default">rrc c</button></div>
@@ -545,324 +546,324 @@
                                 <div class="btn-group" role="group"><button type="button" class="btn btn-default">rrc l</button></div>
                                 <div class="btn-group" role="group"><button type="button" class="btn btn-default">rrc (hl)</button></div>
                             </div>
-                            <div id="rl" class="btn-group btn-group-justified" role="group" aria-label="rl op8">
-                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">rl a</button></div>
-                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">rl b</button></div>
-                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">rl c</button></div>
-                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">rl d</button></div>
-                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">rl e</button></div>
-                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">rl h</button></div>
-                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">rl l</button></div>
-                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">rl (hl)</button></div>
+                            <div id="rl" class="btn-group btn-group-justified hidden" role="group" aria-label="rl op8">
+                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">(P) rl a</button></div>
+                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">(P) rl b</button></div>
+                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">(P) rl c</button></div>
+                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">(P) rl d</button></div>
+                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">(P) rl e</button></div>
+                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">(P) rl h</button></div>
+                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">(P) rl l</button></div>
+                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">(P) rl (hl)</button></div>
                             </div>
-                            <div id="rr" class="btn-group btn-group-justified" role="group" aria-label="rr op8">
-                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">rr a</button></div>
-                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">rr b</button></div>
-                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">rr c</button></div>
-                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">rr d</button></div>
-                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">rr e</button></div>
-                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">rr h</button></div>
-                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">rr l</button></div>
-                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">rr (hl)</button></div>
+                            <div id="rr" class="btn-group btn-group-justified hidden" role="group" aria-label="rr op8">
+                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">(P) rr a</button></div>
+                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">(P) rr b</button></div>
+                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">(P) rr c</button></div>
+                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">(P) rr d</button></div>
+                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">(P) rr e</button></div>
+                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">(P) rr h</button></div>
+                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">(P) rr l</button></div>
+                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">(P) rr (hl)</button></div>
                             </div>
-                            <div id="sla" class="btn-group btn-group-justified" role="group" aria-label="sla op8">
-                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">sla a</button></div>
-                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">sla b</button></div>
-                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">sla c</button></div>
-                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">sla d</button></div>
-                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">sla e</button></div>
-                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">sla h</button></div>
-                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">sla l</button></div>
-                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">sla (hl)</button></div>
+                            <div id="sla" class="btn-group btn-group-justified hidden" role="group" aria-label="sla op8">
+                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">(P) sla a</button></div>
+                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">(P) sla b</button></div>
+                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">(P) sla c</button></div>
+                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">(P) sla d</button></div>
+                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">(P) sla e</button></div>
+                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">(P) sla h</button></div>
+                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">(P) sla l</button></div>
+                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">(P) sla (hl)</button></div>
                             </div>
-                            <div id="sra" class="btn-group btn-group-justified" role="group" aria-label="sra op8">
-                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">sra a</button></div>
-                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">sra b</button></div>
-                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">sra c</button></div>
-                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">sra d</button></div>
-                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">sra e</button></div>
-                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">sra h</button></div>
-                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">sra l</button></div>
-                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">sra (hl)</button></div>
+                            <div id="sra" class="btn-group btn-group-justified hidden" role="group" aria-label="sra op8">
+                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">(P) sra a</button></div>
+                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">(P) sra b</button></div>
+                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">(P) sra c</button></div>
+                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">(P) sra d</button></div>
+                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">(P) sra e</button></div>
+                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">(P) sra h</button></div>
+                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">(P) sra l</button></div>
+                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">(P) sra (hl)</button></div>
                             </div>
-                            <div id="swap" class="btn-group btn-group-justified" role="group" aria-label="swap op8">
-                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">swap a</button></div>
-                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">swap b</button></div>
-                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">swap c</button></div>
-                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">swap d</button></div>
-                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">swap e</button></div>
-                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">swap h</button></div>
-                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">swap l</button></div>
-                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">swap (hl)</button></div>
+                            <div id="swap" class="btn-group btn-group-justified hidden" role="group" aria-label="swap op8">
+                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">(P) swap a</button></div>
+                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">(P) swap b</button></div>
+                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">(P) swap c</button></div>
+                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">(P) swap d</button></div>
+                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">(P) swap e</button></div>
+                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">(P) swap h</button></div>
+                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">(P) swap l</button></div>
+                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">(P) swap (hl)</button></div>
                             </div>
-                            <div id="srl" class="btn-group btn-group-justified" role="group" aria-label="srl op8">
-                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">srl a</button></div>
-                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">srl b</button></div>
-                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">srl c</button></div>
-                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">srl d</button></div>
-                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">srl e</button></div>
-                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">srl h</button></div>
-                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">srl l</button></div>
-                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">srl (hl)</button></div>
+                            <div id="srl" class="btn-group btn-group-justified hidden" role="group" aria-label="srl op8">
+                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">(P) srl a</button></div>
+                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">(P) srl b</button></div>
+                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">(P) srl c</button></div>
+                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">(P) srl d</button></div>
+                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">(P) srl e</button></div>
+                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">(P) srl h</button></div>
+                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">(P) srl l</button></div>
+                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">(P) srl (hl)</button></div>
                             </div>
-                            <div id="prefixLessRot" class="btn-group btn-group-justified" role="group" aria-label="rotations sans pr&eacute;fixe">
+                            <div id="prefixLessRot" class="btn-group btn-group-justified hidden" role="group" aria-label="rotations sans pr&eacute;fixe">
                                 <div class="btn-group" role="group"><button type="button" class="btn btn-default">rlca</button></div>
                                 <div class="btn-group" role="group"><button type="button" class="btn btn-default">rrca</button></div>
                                 <div class="btn-group" role="group"><button type="button" class="btn btn-default">rla</button></div>
                                 <div class="btn-group" role="group"><button type="button" class="btn btn-default">rra</button></div>
                             </div>
-                            <div id="bit0" class="btn-group btn-group-justified" role="group" aria-label="bit 0, op8">
-                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">bit 0, a</button></div>
-                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">bit 0, b</button></div>
-                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">bit 0, c</button></div>
-                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">bit 0, d</button></div>
-                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">bit 0, e</button></div>
-                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">bit 0, h</button></div>
-                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">bit 0, l</button></div>
-                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">bit 0, (hl)</button></div>
+                            <div id="bit0" class="btn-group btn-group-justified hidden" role="group" aria-label="bit 0, op8">
+                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">(P) bit 0, a</button></div>
+                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">(P) bit 0, b</button></div>
+                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">(P) bit 0, c</button></div>
+                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">(P) bit 0, d</button></div>
+                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">(P) bit 0, e</button></div>
+                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">(P) bit 0, h</button></div>
+                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">(P) bit 0, l</button></div>
+                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">(P) bit 0, (hl)</button></div>
                             </div>
-                            <div id="bit1" class="btn-group btn-group-justified" role="group" aria-label="bit 1, op8">
-                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">bit 1, a</button></div>
-                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">bit 1, b</button></div>
-                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">bit 1, c</button></div>
-                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">bit 1, d</button></div>
-                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">bit 1, e</button></div>
-                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">bit 1, h</button></div>
-                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">bit 1, l</button></div>
-                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">bit 1, (hl)</button></div>
+                            <div id="bit1" class="btn-group btn-group-justified hidden" role="group" aria-label="bit 1, op8">
+                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">(P) bit 1, a</button></div>
+                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">(P) bit 1, b</button></div>
+                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">(P) bit 1, c</button></div>
+                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">(P) bit 1, d</button></div>
+                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">(P) bit 1, e</button></div>
+                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">(P) bit 1, h</button></div>
+                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">(P) bit 1, l</button></div>
+                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">(P) bit 1, (hl)</button></div>
                             </div>
-                            <div id="bit2" class="btn-group btn-group-justified" role="group" aria-label="bit 2, op8">
-                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">bit 2, a</button></div>
-                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">bit 2, b</button></div>
-                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">bit 2, c</button></div>
-                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">bit 2, d</button></div>
-                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">bit 2, e</button></div>
-                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">bit 2, h</button></div>
-                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">bit 2, l</button></div>
-                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">bit 2, (hl)</button></div>
+                            <div id="bit2" class="btn-group btn-group-justified hidden" role="group" aria-label="bit 2, op8">
+                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">(P) bit 2, a</button></div>
+                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">(P) bit 2, b</button></div>
+                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">(P) bit 2, c</button></div>
+                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">(P) bit 2, d</button></div>
+                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">(P) bit 2, e</button></div>
+                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">(P) bit 2, h</button></div>
+                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">(P) bit 2, l</button></div>
+                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">(P) bit 2, (hl)</button></div>
                             </div>
-                            <div id="bit3" class="btn-group btn-group-justified" role="group" aria-label="bit 3, op8">
-                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">bit 3, a</button></div>
-                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">bit 3, b</button></div>
-                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">bit 3, c</button></div>
-                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">bit 3, d</button></div>
-                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">bit 3, e</button></div>
-                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">bit 3, h</button></div>
-                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">bit 3, l</button></div>
-                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">bit 3, (hl)</button></div>
+                            <div id="bit3" class="btn-group btn-group-justified hidden" role="group" aria-label="bit 3, op8">
+                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">(P) bit 3, a</button></div>
+                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">(P) bit 3, b</button></div>
+                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">(P) bit 3, c</button></div>
+                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">(P) bit 3, d</button></div>
+                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">(P) bit 3, e</button></div>
+                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">(P) bit 3, h</button></div>
+                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">(P) bit 3, l</button></div>
+                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">(P) bit 3, (hl)</button></div>
                             </div>
-                            <div id="bit4" class="btn-group btn-group-justified" role="group" aria-label="bit 4, op8">
-                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">bit 4, a</button></div>
-                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">bit 4, b</button></div>
-                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">bit 4, c</button></div>
-                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">bit 4, d</button></div>
-                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">bit 4, e</button></div>
-                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">bit 4, h</button></div>
-                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">bit 4, l</button></div>
-                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">bit 4, (hl)</button></div>
+                            <div id="bit4" class="btn-group btn-group-justified hidden" role="group" aria-label="bit 4, op8">
+                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">(P) bit 4, a</button></div>
+                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">(P) bit 4, b</button></div>
+                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">(P) bit 4, c</button></div>
+                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">(P) bit 4, d</button></div>
+                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">(P) bit 4, e</button></div>
+                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">(P) bit 4, h</button></div>
+                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">(P) bit 4, l</button></div>
+                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">(P) bit 4, (hl)</button></div>
                             </div>
-                            <div id="bit5" class="btn-group btn-group-justified" role="group" aria-label="bit 5, op8">
-                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">bit 5, a</button></div>
-                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">bit 5, b</button></div>
-                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">bit 5, c</button></div>
-                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">bit 5, d</button></div>
-                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">bit 5, e</button></div>
-                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">bit 5, h</button></div>
-                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">bit 5, l</button></div>
-                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">bit 5, (hl)</button></div>
+                            <div id="bit5" class="btn-group btn-group-justified hidden" role="group" aria-label="bit 5, op8">
+                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">(P) bit 5, a</button></div>
+                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">(P) bit 5, b</button></div>
+                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">(P) bit 5, c</button></div>
+                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">(P) bit 5, d</button></div>
+                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">(P) bit 5, e</button></div>
+                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">(P) bit 5, h</button></div>
+                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">(P) bit 5, l</button></div>
+                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">(P) bit 5, (hl)</button></div>
                             </div>
-                            <div id="bit6" class="btn-group btn-group-justified" role="group" aria-label="bit 6, op8">
-                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">bit 6, a</button></div>
-                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">bit 6, b</button></div>
-                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">bit 6, c</button></div>
-                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">bit 6, d</button></div>
-                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">bit 6, e</button></div>
-                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">bit 6, h</button></div>
-                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">bit 6, l</button></div>
-                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">bit 6, (hl)</button></div>
+                            <div id="bit6" class="btn-group btn-group-justified hidden" role="group" aria-label="bit 6, op8">
+                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">(P) bit 6, a</button></div>
+                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">(P) bit 6, b</button></div>
+                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">(P) bit 6, c</button></div>
+                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">(P) bit 6, d</button></div>
+                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">(P) bit 6, e</button></div>
+                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">(P) bit 6, h</button></div>
+                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">(P) bit 6, l</button></div>
+                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">(P) bit 6, (hl)</button></div>
                             </div>
-                            <div id="bit7" class="btn-group btn-group-justified" role="group" aria-label="bit 7, op8">
-                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">bit 7, a</button></div>
-                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">bit 7, b</button></div>
-                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">bit 7, c</button></div>
-                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">bit 7, d</button></div>
-                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">bit 7, e</button></div>
-                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">bit 7, h</button></div>
-                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">bit 7, l</button></div>
-                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">bit 7, (hl)</button></div>
+                            <div id="bit7" class="btn-group btn-group-justified hidden" role="group" aria-label="bit 7, op8">
+                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">(P) bit 7, a</button></div>
+                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">(P) bit 7, b</button></div>
+                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">(P) bit 7, c</button></div>
+                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">(P) bit 7, d</button></div>
+                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">(P) bit 7, e</button></div>
+                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">(P) bit 7, h</button></div>
+                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">(P) bit 7, l</button></div>
+                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">(P) bit 7, (hl)</button></div>
                             </div>
-                            <div id="res0" class="btn-group btn-group-justified" role="group" aria-label="res 0, op8">
-                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">res 0, a</button></div>
-                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">res 0, b</button></div>
-                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">res 0, c</button></div>
-                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">res 0, d</button></div>
-                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">res 0, e</button></div>
-                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">res 0, h</button></div>
-                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">res 0, l</button></div>
-                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">res 0, (hl)</button></div>
+                            <div id="res0" class="btn-group btn-group-justified hidden" role="group" aria-label="res 0, op8">
+                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">(P) res 0, a</button></div>
+                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">(P) res 0, b</button></div>
+                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">(P) res 0, c</button></div>
+                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">(P) res 0, d</button></div>
+                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">(P) res 0, e</button></div>
+                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">(P) res 0, h</button></div>
+                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">(P) res 0, l</button></div>
+                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">(P) res 0, (hl)</button></div>
                             </div>
-                            <div id="res1" class="btn-group btn-group-justified" role="group" aria-label="res 1, op8">
-                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">res 1, a</button></div>
-                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">res 1, b</button></div>
-                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">res 1, c</button></div>
-                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">res 1, d</button></div>
-                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">res 1, e</button></div>
-                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">res 1, h</button></div>
-                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">res 1, l</button></div>
-                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">res 1, (hl)</button></div>
+                            <div id="res1" class="btn-group btn-group-justified hidden" role="group" aria-label="res 1, op8">
+                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">(P) res 1, a</button></div>
+                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">(P) res 1, b</button></div>
+                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">(P) res 1, c</button></div>
+                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">(P) res 1, d</button></div>
+                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">(P) res 1, e</button></div>
+                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">(P) res 1, h</button></div>
+                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">(P) res 1, l</button></div>
+                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">(P) res 1, (hl)</button></div>
                             </div>
-                            <div id="res2" class="btn-group btn-group-justified" role="group" aria-label="res 2, op8">
-                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">res 2, a</button></div>
-                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">res 2, b</button></div>
-                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">res 2, c</button></div>
-                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">res 2, d</button></div>
-                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">res 2, e</button></div>
-                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">res 2, h</button></div>
-                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">res 2, l</button></div>
-                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">res 2, (hl)</button></div>
+                            <div id="res2" class="btn-group btn-group-justified hidden" role="group" aria-label="res 2, op8">
+                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">(P) res 2, a</button></div>
+                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">(P) res 2, b</button></div>
+                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">(P) res 2, c</button></div>
+                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">(P) res 2, d</button></div>
+                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">(P) res 2, e</button></div>
+                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">(P) res 2, h</button></div>
+                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">(P) res 2, l</button></div>
+                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">(P) res 2, (hl)</button></div>
                             </div>
-                            <div id="res3" class="btn-group btn-group-justified" role="group" aria-label="res 3, op8">
-                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">res 3, a</button></div>
-                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">res 3, b</button></div>
-                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">res 3, c</button></div>
-                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">res 3, d</button></div>
-                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">res 3, e</button></div>
-                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">res 3, h</button></div>
-                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">res 3, l</button></div>
-                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">res 3, (hl)</button></div>
+                            <div id="res3" class="btn-group btn-group-justified hidden" role="group" aria-label="res 3, op8">
+                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">(P) res 3, a</button></div>
+                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">(P) res 3, b</button></div>
+                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">(P) res 3, c</button></div>
+                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">(P) res 3, d</button></div>
+                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">(P) res 3, e</button></div>
+                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">(P) res 3, h</button></div>
+                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">(P) res 3, l</button></div>
+                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">(P) res 3, (hl)</button></div>
                             </div>
-                            <div id="res4" class="btn-group btn-group-justified" role="group" aria-label="res 4, op8">
-                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">res 4, a</button></div>
-                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">res 4, b</button></div>
-                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">res 4, c</button></div>
-                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">res 4, d</button></div>
-                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">res 4, e</button></div>
-                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">res 4, h</button></div>
-                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">res 4, l</button></div>
-                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">res 4, (hl)</button></div>
+                            <div id="res4" class="btn-group btn-group-justified hidden" role="group" aria-label="res 4, op8">
+                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">(P) res 4, a</button></div>
+                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">(P) res 4, b</button></div>
+                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">(P) res 4, c</button></div>
+                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">(P) res 4, d</button></div>
+                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">(P) res 4, e</button></div>
+                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">(P) res 4, h</button></div>
+                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">(P) res 4, l</button></div>
+                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">(P) res 4, (hl)</button></div>
                             </div>
-                            <div id="res5" class="btn-group btn-group-justified" role="group" aria-label="res 5, op8">
-                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">res 5, a</button></div>
-                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">res 5, b</button></div>
-                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">res 5, c</button></div>
-                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">res 5, d</button></div>
-                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">res 5, e</button></div>
-                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">res 5, h</button></div>
-                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">res 5, l</button></div>
-                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">res 5, (hl)</button></div>
+                            <div id="res5" class="btn-group btn-group-justified hidden" role="group" aria-label="res 5, op8">
+                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">(P) res 5, a</button></div>
+                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">(P) res 5, b</button></div>
+                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">(P) res 5, c</button></div>
+                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">(P) res 5, d</button></div>
+                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">(P) res 5, e</button></div>
+                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">(P) res 5, h</button></div>
+                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">(P) res 5, l</button></div>
+                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">(P) res 5, (hl)</button></div>
                             </div>
-                            <div id="res6" class="btn-group btn-group-justified" role="group" aria-label="res 6, op8">
-                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">res 6, a</button></div>
-                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">res 6, b</button></div>
-                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">res 6, c</button></div>
-                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">res 6, d</button></div>
-                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">res 6, e</button></div>
-                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">res 6, h</button></div>
-                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">res 6, l</button></div>
-                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">res 6, (hl)</button></div>
+                            <div id="res6" class="btn-group btn-group-justified hidden" role="group" aria-label="res 6, op8">
+                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">(P) res 6, a</button></div>
+                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">(P) res 6, b</button></div>
+                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">(P) res 6, c</button></div>
+                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">(P) res 6, d</button></div>
+                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">(P) res 6, e</button></div>
+                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">(P) res 6, h</button></div>
+                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">(P) res 6, l</button></div>
+                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">(P) res 6, (hl)</button></div>
                             </div>
-                            <div id="res7" class="btn-group btn-group-justified" role="group" aria-label="res 7, op8">
-                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">res 7, a</button></div>
-                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">res 7, b</button></div>
-                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">res 7, c</button></div>
-                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">res 7, d</button></div>
-                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">res 7, e</button></div>
-                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">res 7, h</button></div>
-                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">res 7, l</button></div>
-                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">res 7, (hl)</button></div>
+                            <div id="res7" class="btn-group btn-group-justified hidden" role="group" aria-label="res 7, op8">
+                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">(P) res 7, a</button></div>
+                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">(P) res 7, b</button></div>
+                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">(P) res 7, c</button></div>
+                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">(P) res 7, d</button></div>
+                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">(P) res 7, e</button></div>
+                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">(P) res 7, h</button></div>
+                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">(P) res 7, l</button></div>
+                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">(P) res 7, (hl)</button></div>
                             </div>
-                            <div id="set0" class="btn-group btn-group-justified" role="group" aria-label="set 0, op8">
-                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">set 0, a</button></div>
-                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">set 0, b</button></div>
-                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">set 0, c</button></div>
-                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">set 0, d</button></div>
-                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">set 0, e</button></div>
-                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">set 0, h</button></div>
-                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">set 0, l</button></div>
-                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">set 0, (hl)</button></div>
+                            <div id="set0" class="btn-group btn-group-justified hidden" role="group" aria-label="set 0, op8">
+                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">(P) set 0, a</button></div>
+                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">(P) set 0, b</button></div>
+                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">(P) set 0, c</button></div>
+                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">(P) set 0, d</button></div>
+                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">(P) set 0, e</button></div>
+                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">(P) set 0, h</button></div>
+                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">(P) set 0, l</button></div>
+                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">(P) set 0, (hl)</button></div>
                             </div>
-                            <div id="set1" class="btn-group btn-group-justified" role="group" aria-label="set 1, op8">
-                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">set 1, a</button></div>
-                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">set 1, b</button></div>
-                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">set 1, c</button></div>
-                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">set 1, d</button></div>
-                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">set 1, e</button></div>
-                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">set 1, h</button></div>
-                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">set 1, l</button></div>
-                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">set 1, (hl)</button></div>
+                            <div id="set1" class="btn-group btn-group-justified hidden" role="group" aria-label="set 1, op8">
+                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">(P) set 1, a</button></div>
+                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">(P) set 1, b</button></div>
+                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">(P) set 1, c</button></div>
+                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">(P) set 1, d</button></div>
+                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">(P) set 1, e</button></div>
+                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">(P) set 1, h</button></div>
+                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">(P) set 1, l</button></div>
+                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">(P) set 1, (hl)</button></div>
                             </div>
-                            <div id="set2" class="btn-group btn-group-justified" role="group" aria-label="set 2, op8">
-                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">set 2, a</button></div>
-                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">set 2, b</button></div>
-                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">set 2, c</button></div>
-                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">set 2, d</button></div>
-                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">set 2, e</button></div>
-                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">set 2, h</button></div>
-                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">set 2, l</button></div>
-                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">set 2, (hl)</button></div>
+                            <div id="set2" class="btn-group btn-group-justified hidden" role="group" aria-label="set 2, op8">
+                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">(P) set 2, a</button></div>
+                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">(P) set 2, b</button></div>
+                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">(P) set 2, c</button></div>
+                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">(P) set 2, d</button></div>
+                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">(P) set 2, e</button></div>
+                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">(P) set 2, h</button></div>
+                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">(P) set 2, l</button></div>
+                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">(P) set 2, (hl)</button></div>
                             </div>
-                            <div id="set3" class="btn-group btn-group-justified" role="group" aria-label="set 3, op8">
-                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">set 3, a</button></div>
-                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">set 3, b</button></div>
-                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">set 3, c</button></div>
-                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">set 3, d</button></div>
-                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">set 3, e</button></div>
-                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">set 3, h</button></div>
-                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">set 3, l</button></div>
-                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">set 3, (hl)</button></div>
+                            <div id="set3" class="btn-group btn-group-justified hidden" role="group" aria-label="set 3, op8">
+                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">(P) set 3, a</button></div>
+                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">(P) set 3, b</button></div>
+                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">(P) set 3, c</button></div>
+                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">(P) set 3, d</button></div>
+                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">(P) set 3, e</button></div>
+                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">(P) set 3, h</button></div>
+                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">(P) set 3, l</button></div>
+                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">(P) set 3, (hl)</button></div>
                             </div>
-                            <div id="set4" class="btn-group btn-group-justified" role="group" aria-label="set 4, op8">
-                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">set 4, a</button></div>
-                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">set 4, b</button></div>
-                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">set 4, c</button></div>
-                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">set 4, d</button></div>
-                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">set 4, e</button></div>
-                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">set 4, h</button></div>
-                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">set 4, l</button></div>
-                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">set 4, (hl)</button></div>
+                            <div id="set4" class="btn-group btn-group-justified hidden" role="group" aria-label="set 4, op8">
+                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">(P) set 4, a</button></div>
+                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">(P) set 4, b</button></div>
+                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">(P) set 4, c</button></div>
+                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">(P) set 4, d</button></div>
+                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">(P) set 4, e</button></div>
+                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">(P) set 4, h</button></div>
+                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">(P) set 4, l</button></div>
+                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">(P) set 4, (hl)</button></div>
                             </div>
-                            <div id="set5" class="btn-group btn-group-justified" role="group" aria-label="set 5, op8">
-                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">set 5, a</button></div>
-                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">set 5, b</button></div>
-                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">set 5, c</button></div>
-                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">set 5, d</button></div>
-                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">set 5, e</button></div>
-                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">set 5, h</button></div>
-                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">set 5, l</button></div>
-                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">set 5, (hl)</button></div>
+                            <div id="set5" class="btn-group btn-group-justified hidden" role="group" aria-label="set 5, op8">
+                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">(P) set 5, a</button></div>
+                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">(P) set 5, b</button></div>
+                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">(P) set 5, c</button></div>
+                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">(P) set 5, d</button></div>
+                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">(P) set 5, e</button></div>
+                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">(P) set 5, h</button></div>
+                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">(P) set 5, l</button></div>
+                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">(P) set 5, (hl)</button></div>
                             </div>
-                            <div id="set6" class="btn-group btn-group-justified" role="group" aria-label="set 6, op8">
-                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">set 6, a</button></div>
-                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">set 6, b</button></div>
-                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">set 6, c</button></div>
-                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">set 6, d</button></div>
-                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">set 6, e</button></div>
-                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">set 6, h</button></div>
-                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">set 6, l</button></div>
-                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">set 6, (hl)</button></div>
+                            <div id="set6" class="btn-group btn-group-justified hidden" role="group" aria-label="set 6, op8">
+                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">(P) set 6, a</button></div>
+                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">(P) set 6, b</button></div>
+                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">(P) set 6, c</button></div>
+                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">(P) set 6, d</button></div>
+                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">(P) set 6, e</button></div>
+                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">(P) set 6, h</button></div>
+                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">(P) set 6, l</button></div>
+                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">(P) set 6, (hl)</button></div>
                             </div>
-                            <div id="set7" class="btn-group btn-group-justified" role="group" aria-label="set 7, op8">
-                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">set 7, a</button></div>
-                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">set 7, b</button></div>
-                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">set 7, c</button></div>
-                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">set 7, d</button></div>
-                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">set 7, e</button></div>
-                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">set 7, h</button></div>
-                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">set 7, l</button></div>
-                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">set 7, (hl)</button></div>
+                            <div id="set7" class="btn-group btn-group-justified hidden" role="group" aria-label="set 7, op8">
+                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">(P) set 7, a</button></div>
+                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">(P) set 7, b</button></div>
+                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">(P) set 7, c</button></div>
+                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">(P) set 7, d</button></div>
+                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">(P) set 7, e</button></div>
+                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">(P) set 7, h</button></div>
+                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">(P) set 7, l</button></div>
+                                <div class="btn-group" role="group"><button type="button" class="btn btn-default">(P) set 7, (hl)</button></div>
                             </div>
-                            <div id="miscBitLevel" class="btn-group btn-group-justified" role="group" aria-label="set 7, op8">
+                            <div id="miscBitLevel" class="btn-group btn-group-justified hidden" role="group" aria-label="set 7, op8">
                                 <div class="btn-group" role="group"><button type="button" class="btn btn-default">scf</button></div>
                                 <div class="btn-group" role="group"><button type="button" class="btn btn-default">ccf</button></div>
                             </div>
-                            <div id="jr" class="btn-group btn-group-justified" role="group" aria-label="jr $+imm8">
+                            <div id="jr" class="btn-group btn-group-justified hidden" role="group" aria-label="jr $+imm8">
                                 <div class="btn-group" role="group"><button type="button" class="btn btn-default">jr $+imm<sub>8</sub></button></div>
                                 <div class="btn-group" role="group"><button type="button" class="btn btn-default">jr c, $+imm<sub>8</sub></button></div>
                                 <div class="btn-group" role="group"><button type="button" class="btn btn-default">jr nc, $+imm<sub>8</sub></button></div>
                                 <div class="btn-group" role="group"><button type="button" class="btn btn-default">jr z, $+imm<sub>8</sub></button></div>
                                 <div class="btn-group" role="group"><button type="button" class="btn btn-default">jr nz, $+imm<sub>8</sub></button></div>
                             </div>
-                            <div id="jp" class="btn-group btn-group-justified" role="group" aria-label="jp mem<sub>16</sub>">
+                            <div id="jp" class="btn-group btn-group-justified hidden" role="group" aria-label="jp mem<sub>16</sub>">
                                 <div class="btn-group" role="group"><button type="button" class="btn btn-default">jp mem<sub>16</sub></button></div>
                                 <div class="btn-group" role="group"><button type="button" class="btn btn-default">jp c, mem<sub>16</sub></button></div>
                                 <div class="btn-group" role="group"><button type="button" class="btn btn-default">jp nc, mem<sub>16</sub></button></div>
@@ -870,26 +871,26 @@
                                 <div class="btn-group" role="group"><button type="button" class="btn btn-default">jp nz, mem<sub>16</sub></button></div>
                                 <div class="btn-group" role="group"><button type="button" class="btn btn-default">jp (hl)</button></div>
                             </div>
-                            <div id="call" class="btn-group btn-group-justified" role="group" aria-label="call mem<sub>16</sub>">
+                            <div id="call" class="btn-group btn-group-justified hidden" role="group" aria-label="call mem<sub>16</sub>">
                                 <div class="btn-group" role="group"><button type="button" class="btn btn-default">call mem<sub>16</sub></button></div>
                                 <div class="btn-group" role="group"><button type="button" class="btn btn-default">call c, mem<sub>16</sub></button></div>
                                 <div class="btn-group" role="group"><button type="button" class="btn btn-default">call nc, mem<sub>16</sub></button></div>
                                 <div class="btn-group" role="group"><button type="button" class="btn btn-default">call z, mem<sub>16</sub></button></div>
                                 <div class="btn-group" role="group"><button type="button" class="btn btn-default">call nz, mem<sub>16</sub></button></div>
                             </div>
-                            <div id="ret" class="btn-group btn-group-justified" role="group" aria-label="ret">
+                            <div id="ret" class="btn-group btn-group-justified hidden" role="group" aria-label="ret">
                                 <div class="btn-group" role="group"><button type="button" class="btn btn-default">ret</button></div>
                                 <div class="btn-group" role="group"><button type="button" class="btn btn-default">ret c</button></div>
                                 <div class="btn-group" role="group"><button type="button" class="btn btn-default">ret nc</button></div>
                                 <div class="btn-group" role="group"><button type="button" class="btn btn-default">ret z</button></div>
                                 <div class="btn-group" role="group"><button type="button" class="btn btn-default">ret nz</button></div>
                             </div>
-                            <div id="interruptControl" class="btn-group btn-group-justified" role="group" aria-label="interruptions">
+                            <div id="interruptControl" class="btn-group btn-group-justified hidden" role="group" aria-label="interruptions">
                                 <div class="btn-group" role="group"><button type="button" class="btn btn-default">di</button></div>
                                 <div class="btn-group" role="group"><button type="button" class="btn btn-default">ei</button></div>
                                 <div class="btn-group" role="group"><button type="button" class="btn btn-default">reti</button></div>
                             </div>
-                            <div id="rst" class="btn-group btn-group-justified" role="group" aria-label="rst ??h">
+                            <div id="rst" class="btn-group btn-group-justified hidden" role="group" aria-label="rst ??h">
                                 <div class="btn-group" role="group"><button type="button" class="btn btn-default">rst 00h</button></div>
                                 <div class="btn-group" role="group"><button type="button" class="btn btn-default">rst 08h</button></div>
                                 <div class="btn-group" role="group"><button type="button" class="btn btn-default">rst 10h</button></div>
@@ -899,7 +900,7 @@
                                 <div class="btn-group" role="group"><button type="button" class="btn btn-default">rst 30h</button></div>
                                 <div class="btn-group" role="group"><button type="button" class="btn btn-default">rst 38h</button></div>
                             </div>
-                            <div id="pause" class="btn-group btn-group-justified" role="group" aria-label="pause">
+                            <div id="pause" class="btn-group btn-group-justified hidden" role="group" aria-label="pause">
                                 <div class="btn-group" role="group"><button type="button" class="btn btn-default">nop</button></div>
                                 <div class="btn-group" role="group"><button type="button" class="btn btn-default">halt</button></div>
                                 <div class="btn-group" role="group"><button type="button" class="btn btn-default">&lt;corrupted stop&gt;</button></div>
@@ -916,7 +917,7 @@
         <div class="modal fade" id="nbArgs" tabindex="-1" role="dialog" data-backdrop="static" data-keyboard="false">
             <div class="modal-dialog modal-lg" role="document">
                 <div class="modal-content">
-                    <div class="modal-mapCo bg-success">
+                    <div class="modal-header bg-success">
                         <button type="button" class="close togglable" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                         <h4 class="modal-title text-success">Donnez l'(les) argument(s)</h4>
                     </div>
@@ -928,7 +929,7 @@
                                     <span class="input-group-addon"><select name="type" id="type"><option value="dec" selected>DEC</option><option value="bin">BIN</option><option value="hex">HEX</option></select></span>
                                     <input type="text" class="form-control" placeholder="Argument" name="arg" id="argument">
                                 </div>
-                                <p class="help-block"></p>
+								<p class="help-block hidden"></p>
                             </div>
                         </form>
                     </div>
@@ -942,7 +943,7 @@
         <div class="modal fade" id="toutSupprimer" tabindex="-1" role="dialog" data-backdrop="static" data-keyboard="false">
             <div class="modal-dialog modal-lg" role="document">
                 <div class="modal-content">
-                    <div class="modal-mapCo bg-danger">
+                    <div class="modal-header bg-danger">
                         <button type="button" class="close togglable" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                         <h4 class="modal-title text-danger">Supprimer toutes les instructions</h4>
                     </div>
@@ -966,7 +967,7 @@
         <div class="modal fade" id="compiler" tabindex="-1" role="dialog" aria-labelledby="compiler" data-backdrop="static" data-keyboard="false">
             <div class="modal-dialog modal-lg" role="document">
                 <div class="modal-content">
-                    <div class="modal-mapCo bg-success">
+                    <div class="modal-header bg-success">
                         <h4 class="modal-title text-success">Compilation en cours</h4>
                     </div>
                     <div class="modal-body">
@@ -992,7 +993,7 @@
         
         <nav class="navbar navbar-inverse navbar-fixed-top">
             <div class="container-fluid">
-                <div class="navbar-mapCo">
+                <div class="navbar-header">
                     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
                         <span class="sr-only">&Eacute;tendre la barre</span>
                         <span class="icon-bar"></span>
@@ -1007,15 +1008,17 @@
                         <li class="active"><a href="http://forum.prama-initiative.com/viewtopic.php?f=5&t=515" class="btn btn-default" target="_blank">Topic officiel (FAQ, etc.)</a></li>
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
-                        <li><button class="btn btn-default navbar-btn" id="hexListToggle" type="button" role="button">Afficher la HEX liste</button></li>
+                        <li class="hidden-sm hidden-md hidden-lg"><button class="btn btn-default navbar-btn" id="hexListInstaToggle" onclick="instaToggleHexList(); return false;" type="button" role="button">Afficher la HEX liste</button></li>
+                        <li class="hidden-xs"><button class="btn btn-default navbar-btn" id="hexListToggle" onclick="toggleHexList(); return false;" type="button" role="button">Afficher la HEX liste</button></li>
                         <li><p class="navbar-text"></p></li>
+                        <li><p class="navbar-text">Version 2.0 par ISSOtm</p></li>
                     </ul>
                 </div>
             </div>
         </nav>
         <div class="container-fluid">
             <div class="row">
-                <div class="sidebar hidden">
+                <div class="col-sm-0 sidebar hidden">
                     <div class="nav hexlist-sidebar">
                         <table class="table table-striped table-condensed">
                             <thead>
@@ -1102,13 +1105,13 @@
                                 <tr>
                                     <td>0C</td>
                                     <td>12</td>
-                                    <td>Anti-br&ucirc;le</td>
+                                    <td>Anti-brûle</td>
                                     <td>inc c</td>
                                 </tr>
                                 <tr>
                                     <td>0D</td>
                                     <td>13</td>
-                                    <td>Antigel</td>
+                                    <td>D&eacute;gel</td>
                                     <td>dec c</td>
                                 </tr>
                                 <tr>
@@ -1120,7 +1123,7 @@
                                 <tr>
                                     <td>0F</td>
                                     <td>15</td>
-                                    <td>Anti-para</td>
+                                    <td>?</td>
                                     <td>rrca</td>
                                 </tr>
                                 <tr>
@@ -1180,7 +1183,7 @@
                                 <tr>
                                     <td class="bg-danger">19</td>
                                     <td class="bg-danger">25</td>
-                                    <td class="bg-danger">Badge &Acirc;me</td>
+                                    <td class="bg-danger">Badge Âme</td>
                                     <td class="bg-danger">add hl, de</td>
                                 </tr>
                                 <tr>
@@ -1276,7 +1279,7 @@
                                 <tr>
                                     <td class="bg-danger">29</td>
                                     <td class="bg-danger">41</td>
-                                    <td class="bg-danger">Fossile D&ocirc;me</td>
+                                    <td class="bg-danger">Fossile Dôme</td>
                                     <td class="bg-danger">add hl, hl</td>
                                 </tr>
                                 <tr>
@@ -1390,7 +1393,7 @@
                                 <tr>
                                     <td>3C</td>
                                     <td>60</td>
-                                    <td>Eau Fra&icirc;che</td>
+                                    <td>Eau Fraîche</td>
                                     <td>inc a</td>
                                 </tr>
                                 <tr>
@@ -1444,7 +1447,7 @@
                                 <tr>
                                     <td class="bg-danger">45</td>
                                     <td class="bg-danger">69</td>
-                                    <td class="bg-danger">Bo&icirc;te Jeton</td>
+                                    <td class="bg-danger">Boîte Jeton</td>
                                     <td class="bg-danger">ld b, l</td>
                                 </tr>
                                 <tr>
@@ -1618,7 +1621,7 @@
                                 <tr>
                                     <td class="bg-danger">62</td>
                                     <td class="bg-danger">98</td>
-                                    <td class="bg-danger">w&uuml;m'||lm||</td>
+                                    <td class="bg-danger">wüm'||lm||</td>
                                     <td class="bg-danger">ld h, d</td>
                                 </tr>
                                 <tr>
@@ -1636,19 +1639,19 @@
                                 <tr>
                                     <td class="bg-danger">65</td>
                                     <td class="bg-danger">101</td>
-                                    <td class="bg-danger">&ucirc;c' &egrave;||lm||</td>
+                                    <td class="bg-danger">ûc' &egrave;||lm||</td>
                                     <td class="bg-danger">ld h, l</td>
                                 </tr>
                                 <tr>
                                     <td class="bg-danger">66</td>
                                     <td class="bg-danger">102</td>
-                                    <td class="bg-danger">&ecirc;u'c'm'||lm||</td>
+                                    <td class="bg-danger"> êu'c'm'||lm||</td>
                                     <td class="bg-danger">ld h, (hl)</td>
                                 </tr>
                                 <tr>
                                     <td class="bg-danger">67</td>
                                     <td class="bg-danger">103</td>
-                                    <td class="bg-danger">&uuml;wj'&eacute;||lm||</td>
+                                    <td class="bg-danger">üwj'&eacute;||lm||</td>
                                     <td class="bg-danger">ld h, a</td>
                                 </tr>
                                 <tr>
@@ -1660,7 +1663,7 @@
                                 <tr>
                                     <td class="bg-danger">69</td>
                                     <td class="bg-danger">105</td>
-                                    <td class="bg-danger">&ecirc;&ocirc;A ||lm||</td>
+                                    <td class="bg-danger">êôA ||lm||</td>
                                     <td class="bg-danger">ld l, c</td>
                                 </tr>
                                 <tr>
@@ -1678,7 +1681,7 @@
                                 <tr>
                                     <td class="bg-danger">6C</td>
                                     <td class="bg-danger">108</td>
-                                    <td class="bg-danger">&ecirc;j'&agrave;</td>
+                                    <td class="bg-danger">êj'à</td>
                                     <td class="bg-danger">ld l, h</td>
                                 </tr>
                                 <tr>
@@ -1732,7 +1735,7 @@
                                 <tr>
                                     <td class="bg-danger">75</td>
                                     <td class="bg-danger">117</td>
-                                    <td class="bg-danger">*&ouml;****j'*</td>
+                                    <td class="bg-danger">*ö****j'*</td>
                                     <td class="bg-danger">ld (hl), l</td>
                                 </tr>
                                 <tr>
@@ -1750,43 +1753,43 @@
                                 <tr>
                                     <td class="bg-danger">78</td>
                                     <td class="bg-danger">120</td>
-                                    <td class="bg-danger">*4&ocirc; &ecirc;*&uuml;?</td>
+                                    <td class="bg-danger">*4ô ê*ü?</td>
                                     <td class="bg-danger">ld a, b</td>
                                 </tr>
                                 <tr>
                                     <td class="bg-danger">79</td>
                                     <td class="bg-danger">121</td>
-                                    <td class="bg-danger">*8\&ucirc;</td>
+                                    <td class="bg-danger">*8\û</td>
                                     <td class="bg-danger">ld a, c</td>
                                 </tr>
                                 <tr>
                                     <td class="bg-danger">7A</td>
                                     <td class="bg-danger">122</td>
-                                    <td class="bg-danger">8*&ucirc;-</td>
+                                    <td class="bg-danger">8*û-</td>
                                     <td class="bg-danger">ld a, d</td>
                                 </tr>
                                 <tr>
                                     <td class="bg-danger">7B</td>
                                     <td class="bg-danger">123</td>
-                                    <td class="bg-danger">4&ucirc; hA *</td>
+                                    <td class="bg-danger">4û hA *</td>
                                     <td class="bg-danger">ld a, e</td>
                                 </tr>
                                 <tr>
                                     <td class="bg-danger">7C</td>
                                     <td class="bg-danger">124</td>
-                                    <td class="bg-danger">89*****l'&ecirc;Gp*|||</td>
+                                    <td class="bg-danger">89*****l'êGp*|||</td>
                                     <td class="bg-danger">ld a, h</td>
                                 </tr>
                                 <tr>
                                     <td class="bg-danger">7D</td>
                                     <td class="bg-danger">125</td>
-                                    <td class="bg-danger">(nom du rival)* *A***** *&ocirc;p**</td>
+                                    <td class="bg-danger">BOULET* *A***** *ôp**</td>
                                     <td class="bg-danger">ld a, l</td>
                                 </tr>
                                 <tr>
                                     <td class="bg-danger">7E</td>
                                     <td class="bg-danger">126</td>
-                                    <td class="bg-danger">(nom du rival)********</td>
+                                    <td class="bg-danger">BOULET********</td>
                                     <td class="bg-danger">ld a, (hl)</td>
                                 </tr>
                                 <tr>
@@ -1798,7 +1801,7 @@
                                 <tr>
                                     <td class="bg-danger">80</td>
                                     <td class="bg-danger">128</td>
-                                    <td class="bg-danger">o*</td>
+                                    <td class="bg-danger">*</td>
                                     <td class="bg-danger">add a, b</td>
                                 </tr>
                                 <tr>
@@ -1810,19 +1813,19 @@
                                 <tr>
                                     <td class="bg-danger">82</td>
                                     <td class="bg-danger">130</td>
-                                    <td class="bg-danger">4/&icirc;*4\&icirc;y&uuml;. ... ...4*</td>
+                                    <td class="bg-danger">4/î*4\îyü. ... ...4*</td>
                                     <td class="bg-danger">add a, d</td>
                                 </tr>
                                 <tr>
                                     <td class="bg-danger">83</td>
                                     <td class="bg-danger">131</td>
-                                    <td class="bg-danger">4*&icirc;*</td>
+                                    <td class="bg-danger">4*î*</td>
                                     <td class="bg-danger">add a, e</td>
                                 </tr>
                                 <tr>
                                     <td class="bg-danger">84</td>
                                     <td class="bg-danger">132</td>
-                                    <td class="bg-danger">K*** ... ...*p*|||&icirc; a</td>
+                                    <td class="bg-danger">K*** ... ...*p*|||î a</td>
                                     <td class="bg-danger">add a, h</td>
                                 </tr>
                                 <tr>
@@ -1840,19 +1843,19 @@
                                 <tr>
                                     <td class="bg-danger">87</td>
                                     <td class="bg-danger">135</td>
-                                    <td class="bg-danger">&ugrave;</td>
+                                    <td class="bg-danger">ú</td>
                                     <td class="bg-danger">add a, a</td>
                                 </tr>
                                 <tr>
                                     <td class="bg-danger">88</td>
                                     <td class="bg-danger">136</td>
-                                    <td class="bg-danger">| e(nom du rival)* '*||*</td>
+                                    <td class="bg-danger">| eBOULET* '*||*</td>
                                     <td class="bg-danger">adc a, b</td>
                                 </tr>
                                 <tr>
                                     <td class="bg-danger">89</td>
                                     <td class="bg-danger">137</td>
-                                    <td class="bg-danger">****pkmn***&ocirc;***ASPICOT&ocirc;</td>
+                                    <td class="bg-danger">****pkmn***ö***ASPICOTö</td>
                                     <td class="bg-danger">adc a, c</td>
                                 </tr>
                                 <tr>
@@ -1870,7 +1873,7 @@
                                 <tr>
                                     <td class="bg-danger">8C</td>
                                     <td class="bg-danger">140</td>
-                                    <td class="bg-danger">**l'&ecirc;o qB** ......*</td>
+                                    <td class="bg-danger">**l'êo qB** ......*</td>
                                     <td class="bg-danger">adc a, h</td>
                                 </tr>
                                 <tr>
@@ -1882,13 +1885,13 @@
                                 <tr>
                                     <td class="bg-danger">8E</td>
                                     <td class="bg-danger">142</td>
-                                    <td class="bg-danger">p' &agrave;**&ocirc;/\* |||*METAMORPH</td>
+                                    <td class="bg-danger">p' à**ö/\* |||*METAMORPH</td>
                                     <td class="bg-danger">adc a, (hl)</td>
                                 </tr>
                                 <tr>
                                     <td class="bg-danger">8F</td>
                                     <td class="bg-danger">143</td>
-                                    <td class="bg-danger">*a&auml;/*** |||**&ocirc;/</td>
+                                    <td class="bg-danger">*aä/*** |||**ö/</td>
                                     <td class="bg-danger">adc a, a</td>
                                 </tr>
                                 <tr>
@@ -1990,13 +1993,13 @@
                                 <tr>
                                     <td class="bg-danger">A0</td>
                                     <td class="bg-danger">160</td>
-                                    <td class="bg-danger">\**&agrave; ** </td>
+                                    <td class="bg-danger">\**à ** </td>
                                     <td class="bg-danger">and b</td>
                                 </tr>
                                 <tr>
                                     <td class="bg-danger">A1</td>
                                     <td class="bg-danger">161</td>
-                                    <td class="bg-danger">n*</td>
+                                    <td class="bg-danger">*</td>
                                     <td class="bg-danger">and c</td>
                                 </tr>
                                 <tr>
@@ -2014,13 +2017,13 @@
                                 <tr>
                                     <td class="bg-danger">A4</td>
                                     <td class="bg-danger">164</td>
-                                    <td class="bg-danger">*Q n &ocirc;4* h&acirc; ov**</td>
+                                    <td class="bg-danger">*Q n ô4* hâ ov**</td>
                                     <td class="bg-danger">and h</td>
                                 </tr>
                                 <tr>
                                     <td class="bg-danger">A5</td>
                                     <td class="bg-danger">165</td>
-                                    <td class="bg-danger">&ocirc;4*&icirc;8/&acirc;4*&icirc;8*&ucirc;pH*****</td>
+                                    <td class="bg-danger">ô4*î8/â4*î8*ûpH*****</td>
                                     <td class="bg-danger">and l</td>
                                 </tr>
                                 <tr>
@@ -2032,13 +2035,13 @@
                                 <tr>
                                     <td class="bg-danger">A7</td>
                                     <td class="bg-danger">167</td>
-                                    <td class="bg-danger">ov*** * &auml;***&ouml;** a*</td>
+                                    <td class="bg-danger">ov*** * ä***ö** a*</td>
                                     <td class="bg-danger">and a</td>
                                 </tr>
                                 <tr>
                                     <td class="bg-danger">A8</td>
                                     <td class="bg-danger">168</td>
-                                    <td class="bg-danger">(nom du joueur)||* ?&auml;4C 8*********</td>
+                                    <td class="bg-danger">(nom du joueur)||* ?ä4C 8*********</td>
                                     <td class="bg-danger">xor b</td>
                                 </tr>
                                 <tr>
@@ -2050,7 +2053,7 @@
                                 <tr>
                                     <td class="bg-danger">AA</td>
                                     <td class="bg-danger">170</td>
-                                    <td class="bg-danger">&acirc; **2*u&auml;4C *c'vh***y'v</td>
+                                    <td class="bg-danger">â **2*uä4C *c'vh***y'v</td>
                                     <td class="bg-danger">xor d</td>
                                 </tr>
                                 <tr>
@@ -2074,7 +2077,7 @@
                                 <tr>
                                     <td class="bg-danger">AE</td>
                                     <td class="bg-danger">174</td>
-                                    <td class="bg-danger">ps*?L \L4/&icirc;h\**KL *</td>
+                                    <td class="bg-danger">ps*?L \L4/îh\**KL *</td>
                                     <td class="bg-danger">xor (hl)</td>
                                 </tr>
                                 <tr>
@@ -2086,13 +2089,13 @@
                                 <tr>
                                     <td class="bg-danger">B0</td>
                                     <td class="bg-danger">176</td>
-                                    <td class="bg-danger">? *||| , ****/**D**s&auml;</td>
+                                    <td class="bg-danger">? *||| , ****/**D**sä</td>
                                     <td class="bg-danger">or b</td>
                                 </tr>
                                 <tr>
                                     <td class="bg-danger">B1</td>
                                     <td class="bg-danger">177</td>
-                                    <td class="bg-danger">ps*ASPICOTL \L4&icirc;h\***L *</td>
+                                    <td class="bg-danger">ps*ASPICOTL \L4/îh\***L *</td>
                                     <td class="bg-danger">or c</td>
                                 </tr>
                                 <tr>
@@ -2110,7 +2113,7 @@
                                 <tr>
                                     <td class="bg-danger">B4</td>
                                     <td class="bg-danger">180</td>
-                                    <td class="bg-danger">d'*a&auml;*** &ouml;|||** ......* * : *</td>
+                                    <td class="bg-danger">d'*aä*** ö|||** ......* * : *</td>
                                     <td class="bg-danger">or h</td>
                                 </tr>
                                 <tr>
@@ -2567,19 +2570,10 @@
                         </table>
                     </div>
                 </div>
-                <div class="col-sm-12 main">
-                    <div class="page-mapCo">
-                        <h1>PRAMA's GBZ80 to items <small>&Eacute;crivez votre code en items !</small></h1>
+                <div class="col-sm-12 col-sm-offset-0 main">
+                    <div class="page-header">
+                        <h1>PRAMA's ASM to items <small>&Eacute;crivez votre code en items !</small></h1>
                     </div>
-                    <!--[if lt IE 9]>
-                    <div class="alert alert-danger">
-                        <p>
-                            Votre version d'Internet Explorer est trop vieille pour faire tourner GBZ80 to Items !
-                            <br />
-                            Veuillez mettre &agrave; jour vers Internet Explorer 9 ou sup&eacute;rieur !
-                        </p>
-                    </div>
-                    <![endif]-->
                     <div id="boutons" class="btn-group" role="group" aria-label="Actions">
                         <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#ajouter">Ajouter une instruction</button>
                         <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#toutSupprimer">Tout supprimer</button>
@@ -2597,7 +2591,7 @@
                             </ol>
                         </div>
                         <ol class="list-unstyled">
-                            <!-- G&eacute;n&eacute;r&eacute;e automatiquement Ã  la compilation -->
+                            <!-- G&eacute;n&eacute;r&eacute;e automatiquement à la compilation -->
                         </ol>
                     </div>
                     <p></p>
@@ -2611,47 +2605,37 @@
                         <fieldset class="form-group" aria-describedby="help">
                             <legend>Options</legend>
                             <p class="help-block" id="help">Alerter si...</p>
-                            <div>
-                                <button type="button" class="btn btn-danger" id="_multipleWarn">Item pr&eacute;sent plusieurs fois</button>
-                                <button type="button" class="btn btn-danger" id="_invalidWarn">Utilisation d'items invalides</button>
-                                <button type="button" class="btn btn-danger" id="_quantityWarn">Utilisation d'items sans quantit&eacute; (exemple : Colis de Chen) en plus d'un exemplaire</button>
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" id="_multipleWarn" name="multipleWarn" value="0">
+                                    Item pr&eacute;sent plusieurs fois
+                                </label>
+                            </div>
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" id="_invalidWarn" name="invalidWarn" value="0">
+                                    Utilisation d'items invalides
+                                </label>
+                            </div>
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" id="_quantityWarn" name="quantityWarn" value="0">
+                                    Utilisation d'items sans quantit&eacute; (exemple : Colis de Chen) en plus d'un exemplaire
+                                </label>
                             </div>
                         </fieldset>
                     </form>
                 </div>
             </div>
         </div>
-        <footer class="footer">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-sm-12 col-sm-offset-0">
-                        <div class="row">
-                            <div class="col-xs-6 col-lg-5">
-                                <p class="text-muted" id="credit">Cod&eacute; par ISSOtm (<a href="https://twitter.com/ecpensiveLife"><img src="panda.png" width="20" height="20" /> @ecpensiveLife</a>).</p>
-                            </div>
-                            <div class="col-xs-6 col-lg-5 col-lg-offset-2">
-                                <p class="text-muted" id="version">Version actuelle : 2.2 (Build 14092015)<br /><a href="http://prama-initiative.com/8F/beta/">Version 2.3 disponible en b&ecirc;ta</a></p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </footer>
 
-        <!-- es5-shim : ECMAScript 5 compatibility shims for legacy JavaScript engines -->
-        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/es5-shim/4.1.10/es5-shim.min.js"></script>
-        <!-- console-polyfill : IE console polyfill -->
-        <script type="text/javascript" src="console-polyfill.js"></script>
-        
         <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
         <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-        <!-- jQuery UI (used for better animations) -->
-        <script src="jquery-ui.min.js"></script>
 
         <!-- Latest compiled and minified JavaScript -->
         <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
         
-        <script type="text/javascript">/* ACTIVATION DU DEBUG MODE */    var options = {debug: true}; console.warn('RETIRER CE CODE EN PRODUCTION !!!');</script>
-        <script type="text/javascript" src="script.min.js"></script>
+        <!-- ACTIVATION DU DEBUG MODE   script type="text/javascript">var options = {debug: true}; console.warn('RETIRER CE CODE EN PRODUCTION !!!');</script -->
+        <script type="text/javascript" src="js/script.min.js"></script>
     </body>
 </html>
